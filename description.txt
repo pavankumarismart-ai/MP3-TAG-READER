@@ -1,0 +1,25 @@
+Name : P.V.PAVAN KUMAR
+Date : 08-02-2026
+Project : MP3 TAG READER
+
+Description:
+
+The MP3 Tag Reader project is a file-based metadata management system implemented in C. It allows users to view and modify ID3 tags stored inside MP3 audio files. ID3 tags contain important metadata such as song title, artist name, album name, year, genre, and comments, which help in organizing and identifying audio files.
+
+The project supports two main operations:
+
+Viewing Tags - Displaying existing ID3 metadata from an MP3 file.
+
+Editing Tags - Modifying specific ID3 fields without affecting the audio data.
+
+The system works by reading the ID3 header and individual frame structures from the MP3 file. Each frame is identified using a unique frame ID (such as TIT2 for title, TPE1 for artist, TALB for album, etc.), and the corresponding data is extracted or updated accordingly. While editing, the project carefully rewrites the modified tag values back into the file while preserving the integrity of the audio stream.
+
+The project performs strict validation to ensure correctness and data safety:
+
+Only MP3 files with valid ID3 tags are accepted.
+
+Frame sizes and tag boundaries are verified before reading or writing data.
+
+Unsupported or corrupted tags are safely ignored to prevent file damage.
+
+This project demonstrates efficient file handling, structured binary data parsing, and metadata manipulation using C. It provides a practical understanding of how multimedia file formats store information and how low-level file operations can be used to read and modify such data safely.
